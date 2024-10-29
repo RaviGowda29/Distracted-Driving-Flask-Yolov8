@@ -58,11 +58,17 @@ Below is an overview of the main project files:
 bash
 
 ├── app.py                    # Main Flask application file
+
 ├── data.yaml                 # YOLOv8 data configuration
+
 ├── index.html                # Web application interface (HTML)
+
 ├── style.css                 # Styling for the interface
+
 ├── requirements.txt          # Python dependencies
+
 ├── yolov8_training_and_export.ipynb   # Jupyter notebook for training and exporting YOLOv8 model
+
 ├── best.pt                   # YOLOv8 model (to be added by the user) # Upload Ur Trained resulted Model
 
 Usage
