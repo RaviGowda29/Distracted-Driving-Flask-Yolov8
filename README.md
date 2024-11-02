@@ -59,19 +59,12 @@ Here’s an overview of the main project files:
 
 ```
 ├── app.py                          # Main Flask application file
-
 ├── data.yaml                       # YOLOv8 data configuration
-
 ├── index.html                      # Web application interface (HTML)
-
 ├── style.css                       # Styling for the interface
-
 ├── requirements.txt                # Python dependencies
-
 ├── yolov8_training_and_export.ipynb # Jupyter notebook for training and exporting YOLOv8 model
-
 ├── best.pt                        # YOLOv8 model (to be added by the user)
-
 ```
 
 ## Usage
@@ -96,4 +89,4 @@ Open your web browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5
 Feel free to modify the project to suit your needs!
 ```
 
-You can replace `your-username` in the clone URL with your actual GitHub username.
+Now, the links in the Table of Contents will navigate you directly to the corresponding sections in the README.
