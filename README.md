@@ -1,62 +1,43 @@
-```markdown
-# Distracted Driving Detection with YOLOv8 and Flask
+Distracted Driving Detection with YOLOv8 and Flask
 
-This project utilizes YOLOv8 for real-time object detection to identify distracted driving behaviors. The application is built using Flask and requires a pre-trained model (`best.pt`) for predictions on images and videos.
+**Project Overview**  
+This project leverages YOLOv8 for real-time object detection to identify distracted driving behaviors. Built using Flask, it provides a web application that utilizes a pre-trained model (`best.pt`) for predictions on images and videos.
 
-## Table of Contents
+**Components**  
+1. **Object Detection**: The core functionality utilizes YOLOv8 to detect and classify various distracted driving behaviors in real time.
 
-1. [Installation](#installation)
-2. [Setup](#setup)
-3. [Model Download](#model-download)
-4. [Project Structure](#project-structure)
-5. [Usage](#usage)
-6. [Additional Notes](#additional-notes)
+2. **Web Application Interface**: The application is built with Flask, allowing users to upload images or videos and view detection results through a user-friendly web interface.
 
-## Installation
+3. **Model Integration**: The project requires a pre-trained YOLOv8 model (`best.pt`), which is essential for the detection tasks.
 
-### Clone the Repository
+**Installation Instructions**  
+- **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/your-username/Distracted-Driving-Flask-Yolov8.git
+   cd Distracted-Driving-Flask-Yolov8
+   ```
 
-```bash
-git clone https://github.com/your-username/Distracted-Driving-Flask-Yolov8.git
-cd Distracted-Driving-Flask-Yolov8
-```
+- **Set Up the Environment**: Create a virtual environment to maintain a consistent development setup:
+  - For Unix/macOS:
+    ```bash
+    python3 -m venv env
+    source env/bin/activate
+    ```
+  - For Windows:
+    ```bash
+    python -m venv env
+    env\Scripts\activate
+    ```
 
-### Set Up the Environment
+- **Install Dependencies**: After activating the environment, install the required packages:
+  ```bash
+  pip install -r requirements.txt
+  ```
 
-To ensure a consistent development environment, it’s recommended to create a virtual environment:
+- **Model Download**: Download the pre-trained YOLOv8 model (`best.pt`) and place it in the project's root directory.
 
-#### For Unix/macOS
-
-```bash
-python3 -m venv env
-source env/bin/activate
-```
-
-#### For Windows
-
-```bash
-python -m venv env
-env\Scripts\activate
-```
-
-### Install the Dependencies
-
-After activating the environment, install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Model Download
-
-Download the pre-trained YOLOv8 model (`best.pt`) and place it in the project's root directory. This model is essential for detection and classification tasks.
-
-- **Model Path:** Place `best.pt` in the same directory as `app.py`.
-
-## Project Structure
-
+**Project Structure**  
 Here’s an overview of the main project files:
-
 ```
 ├── app.py                          # Main Flask application file
 ├── data.yaml                       # YOLOv8 data configuration
@@ -64,29 +45,20 @@ Here’s an overview of the main project files:
 ├── style.css                       # Styling for the interface
 ├── requirements.txt                # Python dependencies
 ├── yolov8_training_and_export.ipynb # Jupyter notebook for training and exporting YOLOv8 model
-├── best.pt                        # YOLOv8 model (to be added by the user)
+├── best.pt                         # YOLOv8 model (to be added by the user)
 ```
 
-## Usage
+**Usage**  
+- **Run the Flask Application**: Start the server after confirming all dependencies are installed and the model file (`best.pt`) is in place:
+   ```bash
+   python app.py
+   ```
 
-### Run the Flask Application
+- **Access the Web Interface**: Open your web browser and navigate to `http://127.0.0.1:5000` to interact with the application.
 
-Start the Flask server after confirming that all dependencies are installed and the model file (`best.pt`) is in place:
+**Additional Notes**  
+- The `yolov8_training_and_export.ipynb` notebook is included for users interested in training and exporting a custom YOLOv8 model.
+- Customize `data.yaml` according to your specific class configurations.
+- Feel free to modify the project to suit your needs!
 
-```bash
-python app.py
-```
-
-### Access the Web Interface
-
-Open your web browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to interact with the application.
-
-## Additional Notes
-
-- The `yolov8_training_and_export.ipynb` notebook is included for those who wish to train and export a custom YOLOv8 model.
-- You can customize `data.yaml` according to your specific class configurations.
-
-Feel free to modify the project to suit your needs!
-```
-
-Now, the links in the Table of Contents will navigate you directly to the corresponding sections in the README.
+---
